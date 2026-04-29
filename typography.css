@@ -1,0 +1,25 @@
+.soft-note {
+  margin: 0 0 18px;
+  color: var(--quiet);
+  font-size: clamp(0.98rem, 1.7vw, 1.12rem);
+  line-height: 1.55;
+}
+
+.impression-scene h2 {
+  max-width: 760px;
+  font-size: clamp(2.7rem, 7.2vw, 5.85rem);
+}
+
+.impression-scene .lead {
+  max-width: 660px;
+}
+
+.name-mark {
+  margin: 0 0 20px;
+  color: var(--warm);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 9vw, 7.2rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-shadow: 0 0 34px rgba(231, 183, 120, 0.18);
+}
