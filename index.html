@@ -9,7 +9,20 @@
   <body>
     <audio id="song" src="assets/photograph.mp3" preload="auto" autoplay loop></audio>
 
-    <main class="experience" aria-live="polite">
+    <section class="password-gate" id="passwordGate" aria-live="polite">
+      <div class="gate-panel">
+        <p class="kicker">Перед началом</p>
+        <h1>Введи маленький пароль.</h1>
+        <p class="lead">Что маленькая пчёлка любит больше всего? <span>Все буквы маленькие.</span></p>
+        <form id="passwordForm" autocomplete="off">
+          <input id="passwordInput" type="text" inputmode="text" aria-label="Пароль" placeholder="пароль" />
+          <button class="primary" type="submit">Открыть</button>
+        </form>
+        <p class="gate-error" id="passwordError" role="status"></p>
+      </div>
+    </section>
+
+    <main class="experience experience-locked" aria-live="polite">
       <div class="ambient" aria-hidden="true">
         <span></span>
         <span></span>
