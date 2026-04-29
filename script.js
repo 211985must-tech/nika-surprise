@@ -17,6 +17,7 @@ const PASSWORD = "подсолнух";
 let currentScene = 0;
 let toastTimer;
 let effectTimer;
+let isUnlocked = false;
 
 function showToast(message) {
   window.clearTimeout(toastTimer);
@@ -117,6 +118,7 @@ function startSceneEffects(scene) {
 
 
 function unlockExperience() {
+  isUnlocked = true;
   passwordGate.classList.add("password-gate-hidden");
   experience.classList.remove("experience-locked");
   setScene(0);
@@ -138,6 +140,7 @@ passwordForm.addEventListener("submit", (event) => {
 });
 
 function tryStartMusic() {
+  if (!isUnlocked) return;
   if (!song.getAttribute("src")) return;
 
   song.volume = 0.56;
