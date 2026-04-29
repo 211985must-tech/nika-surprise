@@ -7,6 +7,12 @@ const musicStatus = document.querySelector("#musicStatus");
 const replay = document.querySelector("#replay");
 const toast = document.querySelector("#toast");
 const reasonText = document.querySelector("#reasonText");
+const passwordGate = document.querySelector("#passwordGate");
+const passwordForm = document.querySelector("#passwordForm");
+const passwordInput = document.querySelector("#passwordInput");
+const passwordError = document.querySelector("#passwordError");
+const experience = document.querySelector(".experience");
+const PASSWORD = "подсолнух";
 
 let currentScene = 0;
 let toastTimer;
@@ -109,6 +115,28 @@ function startSceneEffects(scene) {
   }, 2200);
 }
 
+
+function unlockExperience() {
+  passwordGate.classList.add("password-gate-hidden");
+  experience.classList.remove("experience-locked");
+  setScene(0);
+  tryStartMusic();
+}
+
+passwordForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const value = passwordInput.value.trim().toLocaleLowerCase("ru-RU");
+
+  if (value === PASSWORD) {
+    passwordError.textContent = "";
+    unlockExperience();
+    return;
+  }
+
+  passwordError.textContent = "Не совсем. Попробуй ещё раз.";
+  passwordInput.select();
+});
+
 function tryStartMusic() {
   if (!song.getAttribute("src")) return;
 
@@ -156,4 +184,3 @@ replay.addEventListener("click", () => {
 });
 
 setScene(0);
-tryStartMusic();
