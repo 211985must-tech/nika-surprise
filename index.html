@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Для Ники</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="password.css" />
-    <link rel="stylesheet" href="typography.css" />
   </head>
   <body>
-    <audio id="song" src="assets/photograph.mp3" preload="none" loop></audio>
-
     <section class="password-gate" id="passwordGate" aria-live="polite">
       <div class="gate-panel">
         <p class="kicker">Перед началом</p>
@@ -32,115 +28,18 @@
         <span></span>
       </div>
 
-      <section class="scene scene-active" data-scene="0">
+      <section class="letter">
         <p class="kicker">Ника</p>
-        <h1>У меня есть для тебя маленькая история.</h1>
-        <p class="lead">Она начинается тихо: с дождя за окном, с музыки и с мысли, которую я долго не решался сказать вслух.</p>
-        <button class="primary" data-next>Открыть</button>
+        <h1>Я не знаю, откроешь ли ты ещё когда-нибудь эту страницу.</h1>
+        <p class="lead">Когда ты её увидишь, мы, наверное, уже давно будем далеко друг от друга.</p>
+        <p>Мне жаль, что всё получилось именно так: с тишиной, недосказанностью и попытками понять то, что, возможно, уже нельзя было удержать.</p>
+        <p>Я не хочу спорить с твоим выбором и не хочу тянуть тебя туда, где тебе тяжело. Если тебе было нужно уйти молча, я постараюсь принять даже это.</p>
+        <p>Спасибо за тепло, которое всё же было. За голос, за смех, за короткое ощущение близости, которое для меня было настоящим.</p>
+        <p>Я правда желаю тебе спокойствия. Пусть рядом будут люди, с которыми тебе не придётся прятаться, и пусть жизнь станет мягче, чем была в эти дни.</p>
+        <p class="closing">Береги себя.</p>
       </section>
-
-      <section class="scene" data-scene="1">
-        <p class="kicker">Вместо письма</p>
-        <h2>Я не знаю, понравится ли тебе такой способ.</h2>
-        <p>Но это самый честный и самый романтичный способ, который я смог придумать: не громкие слова, а несколько страниц о том, что ты для меня значишь.</p>
-        <div class="choice-row">
-          <button class="primary" data-next>Дальше</button>
-        </div>
-      </section>
-
-      <section class="scene" data-scene="2">
-        <p class="kicker">Твоё появление</p>
-        <h2>Ты появилась как фейерверк в тихом небе.</h2>
-        <p>Неожиданно. Ярко. Так, что обычная ночь вдруг стала событием, которое хочется запомнить.</p>
-        <div class="once-effect firework-burst" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <button class="primary" data-next>Я помню</button>
-      </section>
-
-      <section class="scene impression-scene" data-scene="3">
-        <p class="kicker">Первое впечатление</p>
-        <p class="soft-note">Я ещё не видел тебя рядом.</p>
-        <h2>Но в твоих фото и видео уже есть что-то живое.</h2>
-        <p class="lead">Взгляд, улыбка, движение. Этого хватило, чтобы ты стала для меня не просто человеком из интернета.</p>
-        <div class="once-effect glints" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <button class="primary" data-next>Дальше</button>
-      </section>
-
-      <section class="scene" data-scene="4">
-        <p class="kicker">Когда думаю о тебе</p>
-        <h2>Твой голос делает мир мягче.</h2>
-        <p>Иногда одна мысль о тебе тает во мне, как сахар в горячем чае: тихо, тепло и очень сладко.</p>
-        <div class="once-effect tea-steam" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <button class="primary" data-next>Ещё немного</button>
-      </section>
-
-      <section class="scene" data-scene="5">
-        <p class="kicker">Три маленькие причины</p>
-        <h2>Можно выбрать любую.</h2>
-        <div class="reason-grid">
-          <button data-reason="Даже через фото и видео в твоём взгляде есть что-то живое, что хочется запомнить.">Взгляд</button>
-          <button data-reason="Когда я думаю о твоём голосе, всё вокруг становится немного мягче и ближе.">Голос</button>
-          <button data-reason="В тебе есть тепло, рядом с которым хочется быть честнее, спокойнее и смелее.">Тепло</button>
-        </div>
-        <p class="revealed" id="reasonText">Нажми на одну причину.</p>
-        <div class="once-effect glints" aria-hidden="true"></div>
-        <button class="primary" data-next>Я выбрал</button>
-      </section>
-
-      <section class="scene" data-scene="6">
-        <p class="kicker">В мечтах</p>
-        <h2>Я часто представляю нас в шумном городе.</h2>
-        <p>Мы идём за руки по оживлённой улице, мимо спешат машины и люди, но всё это будто остаётся где-то в стороне. Рядом с тобой даже самый громкий город становится тихим и красивым.</p>
-        <div class="once-effect path-lights" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <button class="primary" data-next>Дальше</button>
-      </section>
-
-      <section class="scene" data-scene="7">
-        <p class="kicker">Важно</p>
-        <h2>Я не хочу привязывать тебя к себе.</h2>
-        <p>Мне хочется другого: чтобы рядом со мной ты могла быть живой, честной, свободной. Если тебе нужен свет - я буду рядом. Если нужна тишина - я пойму.</p>
-        <div class="once-effect promise-line" aria-hidden="true"></div>
-        <button class="primary" data-next>Почти финал</button>
-      </section>
-
-      <section class="scene final" data-scene="8">
-        <p class="name-mark">Ника</p>
-        <h2>Я хочу пройти с тобой дальше.</h2>
-        <p>Пусть впереди будут разные месяцы, сезоны, дороги и горы. Сейчас для меня большая честь быть частью твоего пути.</p>
-        <p class="confession">Ты мне нравишься. Очень.</p>
-        <button class="primary" id="replay">Ещё раз</button>
-      </section>
-
-      <aside class="player">
-        <button id="musicToggle" aria-label="Включить музыку">♪</button>
-        <span id="musicStatus">музыка</span>
-      </aside>
-
-      <div class="progress" aria-hidden="true">
-        <span class="progress-fill"></span>
-      </div>
     </main>
 
-    <div class="toast" id="toast" role="status"></div>
     <script src="script.js"></script>
   </body>
 </html>
